@@ -1,0 +1,19 @@
+name: dartUtils
+description: A sample command-line application.
+# version: 1.0.0
+# homepage: https://www.example.com
+# author: dford <email@example.com>
+
+environment:
+  sdk: '>=2.0.0 <3.0.0'
+
+dependencies:
+  path: ^1.6.2
+  system_info: ^0.1.0
+  http: ^0.11.3+17
+  meta: ^1.1.6
+  xml: ^3.2.0
+  quiver: ^2.0.0+1
+
+dev_dependencies:
+  test: ^1.0.0

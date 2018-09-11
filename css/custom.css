@@ -1,0 +1,12 @@
+.reveal {
+  font-size: 38px;
+}
+
+/* increases contrast on background */
+[role=application] h2, [role=application] li, [role=application] p {
+    text-shadow: #421540 0 0 0.2em;
+}
+
+[role=application] a, [role=application] a:visited {
+    color: white;
+}

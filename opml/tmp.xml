@@ -1,0 +1,1550 @@
+<opml version="2.0">
+    <head>
+        <title>Flutter in Motion</title>
+        <dateModified>Tue, 11 Sep 2018 11:39:07 +0000</dateModified>
+        <ownerName>StokeMasterJack</ownerName>
+    </head>
+    <body>
+        <outline text="Main" tags="main">
+            <outline text="Introduction">
+                <outline text="Flutter in brief">
+                    <outline text="Flutter is ..">
+                        <outline text="A new and exciting platform from Google for building apps that target Android and iOS devices"/>
+                    </outline>
+                    <outline text="Flutter excels in the two areas the matter most">
+                        <outline text="User experience">
+                            <outline type="note" isComment="true" text="The quality of apps created with Flutter is very high" user="StokeMasterJack" _user_id="116153" note_id="1283263" dateModified="Wed, 29 Aug 2018 06:23:30 +0000"/>
+                            <outline text="Fast"/>
+                            <outline text="Beautiful"/>
+                            <outline text="Feature rich"/>
+                            <outline text="Native experience"/>
+                        </outline>
+                        <outline text="Developer experience">
+                            <outline text="Developer productivity"/>
+                            <outline text="Developer happiness"/>
+                        </outline>
+                    </outline>
+                    <outline text="How?">
+                        <outline text="Clean break from the past"/>
+                        <outline text="Unique set of design decisions">
+                            <outline text="Slightly unconventional"/>
+                            <outline text="Taken as a whole ...">
+                                <outline type="note" isComment="true" text="Major leap in the quantity and quality of app that a single developer can produce in a short amount period time." user="StokeMasterJack" _user_id="116153" note_id="1283264" dateModified="Wed, 29 Aug 2018 04:08:26 +0000"/>
+                            </outline>
+                            <outline text="Subject of next sections"/>
+                        </outline>
+                    </outline>
+                </outline>
+                <outline text="About this course">
+                    <outline text="Course format: project-based">
+                        <outline text="We'll create two fairly sophisticated applications">
+                            <outline text="Blackjack card game"/>
+                            <outline text="Stripped down version of the Google Contacts contacts"/>
+                            <outline text="Plus a few smaller examplets"/>
+                        </outline>
+                    </outline>
+                    <outline text="You will">
+                        <outline text="Learn the Dart programming language in the context of building Flutter apps"/>
+                        <outline text="Use dozens of Flutter's most useful widgets"/>
+                        <outline text="Use widgets to create screens, handle events and manage application state"/>
+                        <outline text="Create your own stateful and stateless widgets"/>
+                        <outline text="Use Flutter's functional-reactive pattern to structure apps"/>
+                        <outline text="Apply fonts, colors, styles and images; use themes for UI consistency"/>
+                        <outline text="Create complex and predictable layouts using Flutter's layout widgets"/>
+                        <outline text="Navigate between screens using Flutter's navigation and routing features"/>
+                        <outline text="Create forms with validation"/>
+                        <outline text="Access HTTP services"/>
+                        <outline text="Use 3rd party add-on packages and plugins"/>
+                        <outline text="Interop with native Android/iOS code and platform services."/>
+                        <outline text="Create unit tests for business logic and widgets"/>
+                        <outline text="Structure your widget tree and state model in order to separate concerns, make code easier to test, understand and reuse."/>
+                    </outline>
+                    <outline text="Target audience"/>
+                </outline>
+                <outline text="Mobile multi-platform approaches">
+                    <outline text="Two native apps" tags="section">
+                        <outline text="Two native apps" tags="slide">
+                            <outline text="Android-native app">
+                                <outline text="Language: Java or Kotlin"/>
+                                <outline text="UI widgets: Android-native widgets"/>
+                            </outline>
+                            <outline text="iOS-native app">
+                                <outline text="Language: Swift or Objective-C"/>
+                                <outline text="UI widgets: iOS-native widgets"/>
+                            </outline>
+                        </outline>
+                        <outline text="Native UI widgets" tags="slide">
+                            <outline text="Android and iOS both include a set of native UI widgets"/>
+                            <outline text="Do not ship as part of the app"/>
+                            <outline text="Must be preinstalled on the device"/>
+                            <outline text="Part of the device"/>
+                            <outline text="Not part of the app"/>
+                        </outline>
+                        <outline text="Pros" tags="slide">
+                            <outline text="Best performance"/>
+                            <outline text="Most native look and feel"/>
+                        </outline>
+                        <outline text="Cons" tags="slide">
+                            <outline text="Two platforms to learn"/>
+                            <outline text="Two code bases to maintain"/>
+                            <outline text="Cross-platform code sharing: zero"/>
+                            <outline text="More than two platforms to support">
+                                <outline text="Multiple versions of iOS"/>
+                                <outline text="Multiple versions of Android"/>
+                            </outline>
+                            <outline text="Some quotes from developers">
+                                <outline text="It is hard to make a reliable UI because native Android widgets behave differently across Android versions"/>
+                                <outline text="I once lost a whole day fixing a drop-down menu that worked differently on Android 4.1.2."/>
+                                <outline text="Why are there a thousand different versions of every Android package and every single one breaks another?"/>
+                                <outline text="there are still a huge chunk of users running Android 4 while others use 5, 6 and there are a ton of breaking changes between each version, and users can't even upgrade their devices"/>
+                            </outline>
+                        </outline>
+                    </outline>
+                    <outline text="Mobile web app">
+                        <outline text="Language: JavaScript, HTML, CSS"/>
+                        <outline text="UI widgets: HTML elements (input, select, textarea, div)"/>
+                        <outline text="Runs in mobile web browser"/>
+                        <outline text="Pros">
+                            <outline text="If you already know JavaScript/HTML/CSS"/>
+                            <outline text="Cross-platform code sharing"/>
+                        </outline>
+                        <outline text="Cons">
+                            <outline text="UI limited to HTML"/>
+                            <outline text="UI performance (animations, transitions)"/>
+                            <outline text="Access to device features very limited"/>
+                            <outline text="Native look &amp; feel: not so good"/>
+                        </outline>
+                    </outline>
+                    <outline text="Multi-platform frameworks">
+                        <outline text="Frameworks based on web views">
+                            <outline text="Examples">
+                                <outline text="Cordova"/>
+                                <outline text="PhoneGap"/>
+                            </outline>
+                            <outline text="What is a web view?">
+                                <outline text="A native UI component that wraps a mobile web browser"/>
+                                <outline text="Allows a native iOS or Android app to:">
+                                    <outline text="embed a web browser"/>
+                                    <outline text="embed a web app"/>
+                                </outline>
+                                <outline text="Android &amp; iOS">
+                                    <outline text="Both platforms provide a native web view component"/>
+                                    <outline text="Android: WebView"/>
+                                    <outline text="iOS: UIWebView"/>
+                                </outline>
+                            </outline>
+                            <outline text="What is a web view app?">
+                                <outline text="A web app">
+                                    <outline text="Client-side web app"/>
+                                    <outline text="Comprised of html, js and css files"/>
+                                    <outline text="Stored locally on the device"/>
+                                </outline>
+                                <outline text="A tiny native app">
+                                    <outline text="Consisting of nothing but a WebView"/>
+                                    <outline text="Pointing to the web app"/>
+                                </outline>
+                                <outline text="I short: a web app disguised as a native Android/iOS app"/>
+                            </outline>
+                            <outline text="Frameworks add:">
+                                <outline text="Add"/>
+                            </outline>
+                            <outline text="Pros">
+                                <outline text="Same as for mobile web app +"/>
+                                <outline text="Appears more like a native app"/>
+                                <outline text="Better access to device features">
+                                    <outline text="Framework provides: plugins"/>
+                                </outline>
+                            </outline>
+                            <outline text="Cons">
+                                <outline text="Same as for mobile web app"/>
+                            </outline>
+                        </outline>
+                        <outline text="Frameworks that wrap native widgets">
+                            <outline text="Frameworks">
+                                <outline text="React Native"/>
+                                <outline text="Xamarin"/>
+                            </outline>
+                            <outline text="Pros">
+                                <outline text="Native look &amp; feel: excelent"/>
+                            </outline>
+                            <outline text="Cons">
+                                <outline text="Less control over UI"/>
+                                <outline text="Less cross-platform sharing of UI code"/>
+                            </outline>
+                        </outline>
+                        <outline text="Game engines">
+                            <outline text="Bypass most of the native UI libraries/widgets"/>
+                            <outline text="Provide their own graphics and rendering engine"/>
+                            <outline text="Define their own look and feel"/>
+                            <outline text="Minimal reliance on native Android/iOS platform"/>
+                            <outline text="Pros">
+                                <outline text="Fewer cross-realm calls"/>
+                            </outline>
+                            <outline text="Cons">
+                                <outline text="Native look &amp; feel: not so much"/>
+                            </outline>
+                        </outline>
+                    </outline>
+                    <outline text="Cross-realm calls">
+                        <outline text="AKA bridge calls"/>
+                        <outline text="Fast and slow">
+                            <outline text="Execution">
+                                <outline text="Fast: JS code"/>
+                                <outline text="Fast: Native code"/>
+                            </outline>
+                            <outline text="Same-realm calls">
+                                <outline text="Fast: JS calls JS"/>
+                                <outline text="Fast: Native code calls native code"/>
+                            </outline>
+                            <outline text="Cross-realm calls">
+                                <outline text="Slow: JS calls native code"/>
+                                <outline text="Slow: Native code calls JS"/>
+                            </outline>
+                        </outline>
+                        <outline text="Goal: minimize cross-realm calls"/>
+                        <outline text="Example 1: React Native">
+                            <outline text="App code: Interpreted JavaScript"/>
+                            <outline text="UI libs : Native iOS/Android"/>
+                            <outline text="Cross-realm calls">
+                                <outline text="JS - UI lib"/>
+                                <outline text="JS - other native functions"/>
+                            </outline>
+                        </outline>
+                        <outline text="Example 2: Mobile web, WebView">
+                            <outline text="App: Interpreted JavaScript"/>
+                            <outline text="UI lib : Browser DOM (native code)"/>
+                            <outline text="Cross-realm calls">
+                                <outline text="JS - DOM"/>
+                                <outline text="JS - other native functions"/>
+                            </outline>
+                        </outline>
+                    </outline>
+                </outline>
+                <outline text="Dart">
+                    <outline text="Flutter apps are created with Dart programming language"/>
+                    <outline text="By Google">
+                        <outline text="**Pro:** Synergy between Dart and Flutter teams"/>
+                        <outline text="**Pro:** Well funded"/>
+                    </outline>
+                    <outline text="Modern programming language">
+                        <outline text="Objected-oriented and functional"/>
+                        <outline text="Modern, clean syntax"/>
+                        <outline text="Familiar">
+                            <outline type="note" isComment="true" text="For anyone familiar with any of the mainstream C-like languages" user="StokeMasterJack" _user_id="116153" note_id="1282579" dateModified="Sat, 14 Jul 2018 02:52:22 +0000"/>
+                        </outline>
+                    </outline>
+                    <outline text="Statically typed">
+                        <outline text="Pro: IDE-able">
+                            <outline type="note" isComment="true" text="Given that Dart is statically-typed, there is better tooling and refactoring support, at least compared to something like JavaScript [subjective].&#xD;&#xA;" user="StokeMasterJack" _user_id="116153" note_id="1282580" dateModified="Sat, 14 Jul 2018 02:54:57 +0000"/>
+                        </outline>
+                        <outline text="Pro: Refactoring">
+                            <outline type="note" isComment="true" text="Given that Dart is statically-typed, there is better tooling and refactoring support, at least compared to something like JavaScript [subjective].&#xD;&#xA;" user="StokeMasterJack" _user_id="116153" note_id="1282581" dateModified="Sat, 14 Jul 2018 02:54:57 +0000"/>
+                        </outline>
+                        <outline text="Pro: Catch bugs earlier in the development process"/>
+                        <outline text="Pro: Scale to apps built by large teams"/>
+                        <outline text="Pro: Increase overall code quality"/>
+                        <outline text="Type inference">
+                            <outline text="Pro: less clutter"/>
+                        </outline>
+                    </outline>
+                    <outline text="World class IDE's">
+                        <outline text="By Google"/>
+                        <outline text="JetBrains"/>
+                        <outline text="VS Code"/>
+                    </outline>
+                    <outline text="Multi-platform">
+                        <outline text="Web: Client-side web browser apps"/>
+                        <outline text="Dart VM: Server-side and command-line apps: Windows, Mac, linux"/>
+                        <outline text="Flutter: iOS and Android ARM devices"/>
+                    </outline>
+                    <outline text="Isolate-based concurrency model">
+                        <outline text="Dart functions can’t be interrupted by other Dart code"/>
+                        <outline text="No shared memory concurrency"/>
+                        <outline text="No race conditions"/>
+                        <outline text="No deadlock"/>
+                        <outline text="No need for locks">
+                            <outline text="Object allocation without locks"/>
+                            <outline text="Garbage collection without locks"/>
+                        </outline>
+                    </outline>
+                    <outline text="Dart VM">
+                        <outline text="Runs dart source directly">
+                            <outline text="No intermediate code"/>
+                            <outline text="Like node.js"/>
+                            <outline text="Unlike Java and C#"/>
+                            <outline text="**Pro:** No lengthy compile step"/>
+                        </outline>
+                        <outline text="Used for">
+                            <outline text="Server-side apps"/>
+                            <outline text="Command line apps"/>
+                            <outline text="Flutter apps: dev mode only"/>
+                        </outline>
+                        <outline text="Hot *restart*">
+                            <outline text="Used: while developing"/>
+                            <outline text="When: after a code change"/>
+                            <outline text="Code: reloaded"/>
+                            <outline text="State: ***reinitialized***"/>
+                            <outline text="Time: ***1.5s***">
+                                <outline type="note" isComment="true" text="On my 2015 MacBook" user="StokeMasterJack" _user_id="116153" note_id="1282582" dateModified="Fri, 31 Aug 2018 23:16:09 +0000"/>
+                            </outline>
+                            <outline text="**Pro:** Less time waiting for restarts"/>
+                        </outline>
+                        <outline text="Hot *reload*">
+                            <outline type="note" isComment="true" text="A hot reload takes about a half second on my 2015 MacBook." user="StokeMasterJack" _user_id="116153" note_id="1282583" dateModified="Sat, 14 Jul 2018 03:07:03 +0000"/>
+                            <outline text="Used: while developing"/>
+                            <outline text="When: after a code change"/>
+                            <outline text="Code: reloaded">
+                                <outline type="note" isComment="true" text="Reloads your app's code (i.e. updates the running app to reflect the most recent code changes)" user="StokeMasterJack" _user_id="116153" note_id="1282584" dateModified="Fri, 31 Aug 2018 23:07:33 +0000"/>
+                            </outline>
+                            <outline text="State: ***preserved***">
+                                <outline type="note" isComment="true" text="But it preserves your app's state (the values of variables). " user="StokeMasterJack" _user_id="116153" note_id="1282585" dateModified="Fri, 31 Aug 2018 23:11:56 +0000"/>
+                            </outline>
+                            <outline text="Time: ***.5s***">
+                                <outline type="note" isComment="true" text="On my 2015 MacBook." user="StokeMasterJack" _user_id="116153" note_id="1282586" dateModified="Fri, 31 Aug 2018 23:15:54 +0000"/>
+                            </outline>
+                            <outline text="Why is preserving state useful?">
+                                <outline type="note" isComment="true" text="Suppose you are testing page 5 page of a 5 page wizard. And you just manually entered fake data for pages 1, 2, 3 and 4 just so you can get to page 5. Now, make a code change, and press hot reload:&#xD;&#xA;Your code changes will instantly be reflected in the UI.&#xD;&#xA;But your app's state will be preserved:&#xD;&#xA;You will still be on page 5. &#xD;&#xA;You won't have to re-enter the data for pages 1 thru 4.&#xD;&#xA;In other words, you don't have to start back at the beginning.&#xD;&#xA;" user="StokeMasterJack" _user_id="116153" note_id="1282587" dateModified="Sat, 14 Jul 2018 03:08:02 +0000"/>
+                            </outline>
+                            <outline text="**Pro:** Less time waiting for restarts"/>
+                            <outline text="**Pro:** Less time setting up app state"/>
+                        </outline>
+                        <outline text="Even if Flutter wasn't cross-platform ...">
+                            <outline type="note" isComment="true" text="the hot reload feature alone would make one seriously consider dumping their native Android or iOS setup and switching to Flutter." user="StokeMasterJack" _user_id="116153" note_id="1282588" dateModified="Sat, 14 Jul 2018 03:12:45 +0000"/>
+                        </outline>
+                    </outline>
+                    <outline text="AOT compilers">
+                        <outline text="AOT - compile to JavaScript">
+                            <outline text="Web front-end apps"/>
+                        </outline>
+                        <outline text="AOT - compile to ARM">
+                            <outline text="Flutter apps (release mode)"/>
+                            <outline text="Compile straight to native ARM code"/>
+                            <outline text="Runs directly on the mobile device's bare metal"/>
+                            <outline text="**Pro:** Fast startup"/>
+                            <outline text="**Pro:** Fast, smooth rendering: scrolling, animation, transitions"/>
+                            <outline text="**Con:** Test != Prod">
+                                <outline type="note" isComment="true" text="The test environment (Dart VM) may not be identical to the ultimate execution environment (compiled native code).&#xD;&#xA;&#xD;&#xA;" user="StokeMasterJack" _user_id="116153" note_id="1282589" dateModified="Sat, 14 Jul 2018 03:15:48 +0000"/>
+                                <outline type="note" isComment="true" text="This could, potentially, result in bugs that show up in production but not in testing." user="StokeMasterJack" _user_id="116153" note_id="1282590" dateModified="Sat, 14 Jul 2018 03:16:16 +0000"/>
+                                <outline type="note" isComment="true" text="Note: So far I haven't had this happen." user="StokeMasterJack" _user_id="116153" note_id="1282591" dateModified="Sat, 14 Jul 2018 03:16:10 +0000"/>
+                            </outline>
+                        </outline>
+                        <outline text="Tree Shaking">
+                            <outline text="**Pro:** Size of compiled app is reduced"/>
+                        </outline>
+                    </outline>
+                    <outline text="Dart API">
+                        <outline text="The set of libraries available depends upon the target platform (Web, Flutter or Dart VM)"/>
+                    </outline>
+                    <outline text="Fast">
+                        <outline text="Object allocation without locks"/>
+                        <outline text="Garbage collection without locks"/>
+                        <outline text="AOT Dart to native ARM compiler"/>
+                    </outline>
+                </outline>
+                <outline text="Widgets">
+                    <outline text="Everything is a widget">
+                        <outline text="What is a widget?">
+                            <outline type="note" isComment="true" text="A UI component" user="StokeMasterJack" _user_id="116153" note_id="1282611" dateModified="Mon, 16 Jul 2018 03:24:55 +0000"/>
+                        </outline>
+                        <outline text="Widgets can be">
+                            <outline text="Small things, like a button"/>
+                            <outline text="Larger things, like a container"/>
+                            <outline text="An entire screen"/>
+                            <outline text="The entire app is a widget"/>
+                        </outline>
+                        <outline text="Building a Flutter app consists of">
+                            <outline text="Using widgets"/>
+                            <outline text="Creating widgets"/>
+                            <outline text="Composing widgets"/>
+                        </outline>
+                        <outline text="Your entire UI ends up being">
+                            <outline text="Giant, deeply nested tree"/>
+                            <outline text="Representing UI containment hierarchy"/>
+                        </outline>
+                        <outline text="Very little ceremony">
+                            <outline text="Using, creating, composing widgets"/>
+                            <outline text="Pro: Stitch together widgets into a powerful app in a very short amount of time"/>
+                        </outline>
+                    </outline>
+                    <outline text="Stock widget suite">
+                        <outline text="Huge"/>
+                        <outline text="Stock"/>
+                        <outline text="By Google"/>
+                        <outline text="Beautiful &amp; Feature-rich"/>
+                        <outline text="Multi-platform"/>
+                        <outline text="Pro: More widgets for your apps"/>
+                        <outline text="Pro: Less reliance on sketchy 3rd party ecosystem">
+                            <outline type="note" isComment="true" text="Typical day in my React life. &#xD;&#xA;You need a particular widget, say, an infinite scroll widget. You search the web to find that there are eight to choose from. All kind of crappy. Created as someone’s side project. Each has 7 github stars, crappy docs and zero StackOverflow support.&#xD;&#xA;" user="StokeMasterJack" _user_id="116153" note_id="1282612" dateModified="Wed, 29 Aug 2018 12:41:05 +0000"/>
+                        </outline>
+                    </outline>
+                    <outline text="Flutter-native widgets">
+                        <outline text="Flutter implements its own UI widgets">
+                            <outline text="From scratch"/>
+                            <outline text="Drawn by Flutter"/>
+                            <outline text="Using only the platform's low-level graphics primitives"/>
+                        </outline>
+                        <outline text="Pro: UI consistency">
+                            <outline type="note" isComment="true" text="Flutter UI widgets are more likely to look and behave consistently across multiple platforms and versions." user="StokeMasterJack" _user_id="116153" note_id="1283443" dateModified="Sat, 14 Jul 2018 04:02:15 +0000"/>
+                        </outline>
+                        <outline text="Pro: Brand-first designs">
+                            <outline type="note" isComment="true" text="Flutter provides a good fit for companies wanting to promote customized, brand-first design. &#xD;&#xA;" user="StokeMasterJack" _user_id="116153" note_id="1283444" dateModified="Sat, 14 Jul 2018 04:02:36 +0000"/>
+                        </outline>
+                        <outline text="Pro: Less to learn/maintain">
+                            <outline type="note" isComment="true" text="One has only to learn (and maintain) a single set of UI widgets when building a UI that targets both iOS and Android. " user="StokeMasterJack" _user_id="116153" note_id="1283445" dateModified="Sat, 14 Jul 2018 04:33:36 +0000"/>
+                        </outline>
+                        <outline text="Pro: Fewer cross-realm calls"/>
+                        <outline text="Con: Less native look and feel">
+                            <outline type="note" isComment="true" text="Since Flutter does not use native widgets, a Flutter app may not feel as native to users who are used to a certain native look and feel, at least compared to an apps that uses native widgets (including React Native)." user="StokeMasterJack" _user_id="116153" note_id="1283446" dateModified="Sat, 14 Jul 2018 04:03:12 +0000"/>
+                            <outline text="Flutter does have some solutions to this problem">
+                                <outline type="note" isComment="true" text="Flutter has a number of features for dealing with this exact situation. We'll revisit this topic in a later section." user="StokeMasterJack" _user_id="116153" note_id="1283447" dateModified="Sat, 14 Jul 2018 04:08:30 +0000"/>
+                            </outline>
+                        </outline>
+                    </outline>
+                </outline>
+                <outline text="Cross-platform development">
+                    <outline text="Platform flavored widgets">
+                        <outline text="Agnostic vs flavored widgets">
+                            <outline text="Platform agnostic widgets">
+                                <outline text="Dart package: widgets"/>
+                                <outline text="Examples">
+                                    <outline text="Image, Text, Icon"/>
+                                    <outline text="ListView, GridView, Row, Column"/>
+                                </outline>
+                            </outline>
+                            <outline text="Android flavored widgets">
+                                <outline text=" Dart package: material"/>
+                                <outline text="Examples">
+                                    <outline text="RaisedButton, Icons"/>
+                                    <outline text="Dialog, TabBar"/>
+                                </outline>
+                            </outline>
+                            <outline text="iOS flavored widgets">
+                                <outline text="Dart package: cupertino"/>
+                                <outline text="Examples">
+                                    <outline text="CupertinoButton, CupertinoIcons"/>
+                                    <outline text="CupertinoDialog, CupertinoTabBar"/>
+                                </outline>
+                            </outline>
+                        </outline>
+                        <outline text="Mix and match">
+                            <outline text="Material not necessarily Android-only"/>
+                            <outline text="Cupertino not necessarily iOS-only"/>
+                            <outline text="All widgets run on all platforms"/>
+                        </outline>
+                        <outline text="Flutter's three widget libraries">
+                            <outline type="note" isComment="true" text="Show a table" user="StokeMasterJack" _user_id="116153" note_id="1282623" dateModified="Wed, 29 Aug 2018 11:20:32 +0000"/>
+                            <outline text="widgets"/>
+                            <outline text="material"/>
+                            <outline text="cupertino"/>
+                        </outline>
+                    </outline>
+                    <outline text="Platform adaptive widgets">
+                        <outline text="Some widgets do automatically adapt to the platform"/>
+                        <outline text="material/AppBar">
+                            <outline text="Title text alignment"/>
+                            <outline text="Back button icon"/>
+                        </outline>
+                        <outline text="material/PopupMenuButton">
+                            <outline text="Overflow icon"/>
+                        </outline>
+                        <outline text="widgets/ListView">
+                            <outline text="Scroll physics"/>
+                        </outline>
+                    </outline>
+                    <outline text="Cross-platform strategies">
+                        <outline text="Strategy 1: No platform-specific code">
+                            <outline text="Use only platform-agnostic and material widgets"/>
+                            <outline text="Write no explicit code to deal with platform differences"/>
+                            <outline text="Pros &amp; cons">
+                                <outline text="Pro: App should run on iOS and Android"/>
+                                <outline text="Pro: Some aspects of the UI will automatically adapt to the platform">
+                                    <outline type="note" isComment="true" text="So there will be *some* native look &amp; feel" user="StokeMasterJack" _user_id="116153" note_id="1282624" dateModified="Mon, 16 Jul 2018 13:54:06 +0000"/>
+                                </outline>
+                                <outline text="Pro: Cheapest solution"/>
+                                <outline text="Con: App may not look &amp; feel very native for iOS users"/>
+                            </outline>
+                        </outline>
+                        <outline text="Strategy 1a: Platform-specific button">
+                            <outline text="Same as #1 with:"/>
+                            <outline text="Some conditionals thrown in:">
+                                <outline text="```isIOS?CupertinoButton(..):RaisedButton(..)```"/>
+                            </outline>
+                            <outline text="Perhaps a few iOS or Android specific screens:">
+                                <outline text="```isIOS?MyIosScreen(..):MyAndroidScreen(..)```"/>
+                            </outline>
+                        </outline>
+                        <outline text="Strategy 2: No shared code">
+                            <outline text="Create two completely separate apps"/>
+                            <outline text="One for iOS">
+                                <outline text="Using packages: widget, material &amp; cupertino"/>
+                            </outline>
+                            <outline text="One for Android">
+                                <outline text="Using packages widget &amp; material"/>
+                            </outline>
+                            <outline text="No code sharing"/>
+                            <outline text="Pro: Users experience maximal native look &amp; feel"/>
+                            <outline text="Pro: Only one technology (Flutter) to learn. Compared to creating two separate *native* apps."/>
+                            <outline text="Con: You still have to write two apps"/>
+                        </outline>
+                        <outline text="Strategy 2a: Share business logic">
+                            <outline text="Same as #2 but with some code sharing"/>
+                            <outline text="Still mostly separate codebases for UI"/>
+                            <outline text="Some sharing of common business logic code"/>
+                            <outline text="Pro: Same as #2 but with some efficiency gained in the code sharing"/>
+                        </outline>
+                    </outline>
+                    <outline text="Pain points">
+                        <outline text="Platform-flavor widgets are not automatic">
+                            <outline type="note" isComment="true" text="Flutter provides the Cupertino widgets&#xD;&#xA;but it's up to you to perform a platform check and &#xD;&#xA;use the appropriate widget for the platform." user="StokeMasterJack" _user_id="116153" note_id="1282625" dateModified="Tue, 17 Jul 2018 13:55:19 +0000"/>
+                        </outline>
+                        <outline text="Lack of parity between cupertino and material widgets"/>
+                        <outline text="iOS gets less love">
+                            <outline type="note" isComment="true" text="At present, does not get as much love (from the Flutter team) as Android" user="StokeMasterJack" _user_id="116153" note_id="1282626" dateModified="Tue, 17 Jul 2018 13:59:20 +0000"/>
+                            <outline text="Fewer Cupertino widgets"/>
+                            <outline text="Cupertino widgets do not currently support themes"/>
+                            <outline text="Can't do background execution on iOS"/>
+                        </outline>
+                        <outline text="You have to setup and maintain 3 dev environments"/>
+                        <outline text="Creating an app that is both cross-platform and truly native feeling is still a lot of work."/>
+                        <outline text="A Mac is required for iOS development"/>
+                    </outline>
+                </outline>
+                <outline text="Native Interop">
+                    <outline text="Flutter's mechanism for calling device native code from Dart"/>
+                    <outline text="Platform channels allow your Dart code to call into:">
+                        <outline text="Native Android code (Java or Kotlin)"/>
+                        <outline text="Native iOS code (Objective-C or Swift)"/>
+                    </outline>
+                    <outline text="This is useful for 3 possible reasons:">
+                        <outline text="You need call a native platform API">
+                            <outline text="And that functionality is not already exposed via a Dart API"/>
+                            <outline text="Ex: GPS, camera, notification system"/>
+                        </outline>
+                        <outline text="To call native functions you may have already written">
+                            <outline text="For example, you may already have an algorithm written in Kotlin that you want to reuse"/>
+                        </outline>
+                        <outline text="Less likely: there may be some task that is better accomplished using native code."/>
+                    </outline>
+                    <outline text="Why calling native code from Flutter is pain in the butt">
+                        <outline text="1\. In order to *call* native code, you must first **write some native code**">
+                            <outline text="You can't just arbitrarily call a native function from Dart"/>
+                            <outline text="You must first write some special *bridge* code">
+                                <outline text="**The bridge code is on the native side**"/>
+                                <outline text="In Java or Kotlin, for Android"/>
+                                <outline text="In Objective-C or Swift for iOS"/>
+                            </outline>
+                        </outline>
+                        <outline text="2\. You must also write some sophisticated bridge code on the Dart side"/>
+                        <outline text="3\. All calls to (or from) native code must be **async**"/>
+                        <outline text="4\. All data passed to (or from) native code must be **serialized**"/>
+                        <outline text="If the native functionality is needed for both iOS and Android (likely)">
+                            <outline text="You will have to create 3 pieces:">
+                                <outline text="1\. The Dart side: send the message"/>
+                                <outline text="2\. The Android side (in Kotlin or Java): receive the message"/>
+                                <outline text="3\. The iOS side (in Swift or Objective-C): receive the message"/>
+                            </outline>
+                        </outline>
+                    </outline>
+                    <outline text="Platform channels are based on">
+                        <outline text="Asynchronous message passing"/>
+                        <outline text="Serialization"/>
+                    </outline>
+                    <outline text="Flutter projects have 3 modules">
+                        <outline text="1\. Dart module"/>
+                        <outline text="2\. Native Android module (Java or Kotlin)"/>
+                        <outline text="3\. Native iOS module (Objective-C or Swift)"/>
+                        <outline text="The native modules are used when you need write some native *bridge* code"/>
+                    </outline>
+                    <outline text="Interop strategy #1: Don't make native calls">
+                        <outline text="Ignore the two native modules">
+                            <outline text="Add no new code to the native Android module"/>
+                            <outline text="Add no new code to the native iOS module"/>
+                        </outline>
+                        <outline text="Write only Dart code (in the Dart module)"/>
+                        <outline text="Rely solely on what can be achieved via the pure Dart APIs"/>
+                        <outline text="This is the most cross-platform strategy"/>
+                    </outline>
+                    <outline text="Plugins">
+                        <outline text="It is entirely feasible to create useful Flutter apps without ever calling native code">
+                            <outline text="At least not directly"/>
+                            <outline text="With each passing day, the need to make native calls decreases"/>
+                            <outline text="This is because of the growing availability of *Plugins*">
+                                <outline text="Many tasks that formerly required native calls (and native bridge code):"/>
+                                <outline text="Are now available, in the form of plugins, without ever leaving the world of pure Dart"/>
+                                <outline text="Google and community are extending the Flutter platform by creating more and more plugins everyday"/>
+                            </outline>
+                        </outline>
+                        <outline text="A plugin is:">
+                            <outline text="A Dart package that you can import into your project and use"/>
+                            <outline text="It (internally) makes calls into the native iOS and/or Android platforms so you don't have to"/>
+                            <outline text="The plugin encapsulates the complex native bridge code."/>
+                            <outline text="The functionality is exposed to you in the form of a nice friendly Dart API"/>
+                            <outline text="You are completely hidden from from native code"/>
+                        </outline>
+                    </outline>
+                    <outline text="Interop strategy #2: Find a plugin that meets your needs">
+                        <outline text="Import the plugin - just like importing any package"/>
+                        <outline text="No need to write nasty native bridge code"/>
+                    </outline>
+                    <outline text="Interop strategy #3: Make the native calls yourself">
+                        <outline text="You were unable to find a plugin that did what you needed"/>
+                        <outline text="You were unable to find a plugin that did what you needed"/>
+                        <outline text="So now you have to write some native bridge code"/>
+                        <outline text="We cover the details of calling native code in a later section"/>
+                    </outline>
+                    <outline text="Pain points">
+                        <outline text="Native interop is a bit painful">
+                            <outline type="note" isComment="true" text="Note: Since UI widgets compile to ARM and run on Flutter's high speed graphics engine, UI widgets do not have this problem." user="StokeMasterJack" _user_id="116153" note_id="1282627" dateModified="Tue, 17 Jul 2018 13:41:02 +0000"/>
+                            <outline text="Bridge code is awkward and laborious"/>
+                        </outline>
+                        <outline text="Potentially slow if traffic is high">
+                            <outline text="Applies to non-gui bridge calls">
+                                <outline text="Due to Flutter-native widgets, there will be less bridge traffic"/>
+                            </outline>
+                        </outline>
+                    </outline>
+                </outline>
+                <outline text="Reactive pattern">
+                    <outline text="Reactive pattern">
+                        <outline type="note" isComment="true" text="In an interview with Eric Seidel (Flutter founder), Eric used the term &quot;reactive pattern&quot;. So I am going with that. " user="StokeMasterJack" _user_id="116153" note_id="1282628" dateModified="Sun, 15 Jul 2018 23:28:50 +0000"/>
+                        <outline text="This is one of Flutter's the most important design features">
+                            <outline text="We'll revisit this topic in-depth throughout the rest of the course"/>
+                        </outline>
+                        <outline text="Pro: Complex apps are more predictable easier to reason about"/>
+                        <outline text="Pro: Easier to keep various parts of the UI in sync"/>
+                        <outline text="Con: Render performance could suffer"/>
+                        <outline text="Con: Developers will need to learn reactive pattern"/>
+                    </outline>
+                    <outline text="No separate UI Language">
+                        <outline text="No XML or HTML"/>
+                        <outline text="No template language"/>
+                        <outline text="All Flutter UI is coded in Dart"/>
+                        <outline text="Flutter UI programming is tree-building">
+                            <outline text="In the form of deeply nested function calls"/>
+                            <outline text="Specifically, constructor calls"/>
+                        </outline>
+                        <outline text="Flutter is an outlier">
+                            <outline text="This goes against most other modern UI frameworks.">
+                                <outline type="note" isComment="true" text="It is one of Flutter's more controversial decisions." user="StokeMasterJack" _user_id="116153" note_id="1282629" dateModified="Sat, 14 Jul 2018 04:38:37 +0000"/>
+                            </outline>
+                            <outline text="We'll come back to this topic in a later section.">
+                                <outline type="note" isComment="true" text="I'll try to convince you why it's a great design decision" user="StokeMasterJack" _user_id="116153" note_id="1282630" dateModified="Sat, 14 Jul 2018 04:38:08 +0000"/>
+                            </outline>
+                        </outline>
+                        <outline text="Con: In Dart, deeply nested tree structures can be hard to visualize">
+                            <outline text="Unlike XML, Dart doesn't have *closing* tags"/>
+                            <outline text="Flutter has done a few things to address this issue">
+                                <outline text="IDE generated &quot;virtual closing tags&quot;"/>
+                                <outline text="Keyword &quot;new&quot; is now optional for constructors"/>
+                                <outline text="Flutter outline view (in IDE) to help visualize the tree"/>
+                            </outline>
+                        </outline>
+                        <outline text="Pro: A single language means">
+                            <outline text=" Fewer moving parts"/>
+                            <outline text="Less impedance mismatch"/>
+                        </outline>
+                        <outline text="Pro: Since all UI is defined in Dart we have all of Dart at our disposal for building UI">
+                            <outline text="If and switch statements for conditional rendering"/>
+                            <outline text="Looping constructs for lists and tables"/>
+                            <outline text="All of Dart's mechanisms for organization and managing complexity"/>
+                            <outline text="All of Dart's mechanisms for reuse. In Flutter:">
+                                <outline text="Reusable snippets of UI are simply Dart functions and classes"/>
+                                <outline text="A Widgets is a class"/>
+                                <outline text="A WidgetBuilder is a function"/>
+                            </outline>
+                            <outline text="Reusable UI snippets will always have">
+                                <outline text="Well-defined inputs"/>
+                                <outline text=" In the form of named, typed function parameters"/>
+                                <outline text="So other developers will know how to use your UI snippet"/>
+                                <outline text="And tools can provide assistance"/>
+                            </outline>
+                            <outline text="Static types provide value to UI code:">
+                                <outline text="IDE auto-completion"/>
+                                <outline text="Refactoring"/>
+                                <outline text="Catching errors at compile-time"/>
+                                <outline text="Dart compiler can optimize and tree-shake"/>
+                            </outline>
+                        </outline>
+                    </outline>
+                    <outline text="Extreme composition">
+                        <outline text="Minimal widget inheritance">
+                            <outline type="note" isComment="true" text="Unlike other UI frameworks, Flutter widgets make very little use of inheritance" user="StokeMasterJack" _user_id="116153" note_id="1282631" dateModified="Wed, 29 Aug 2018 12:42:44 +0000"/>
+                        </outline>
+                        <outline text="Reuse is achieved by *composing* widgets"/>
+                        <outline text="Pro: More flexible, less brittle mechanism of reuse"/>
+                    </outline>
+                </outline>
+                <outline text="Tools">
+                    <outline text="Flutter SDK">
+                        <outline text="Dart VM"/>
+                        <outline text="AOT compilers"/>
+                        <outline text="Core dart packages">
+                            <outline text="Packages under the dart: prefix"/>
+                            <outline text="I/O, networking, async, collections, etc."/>
+                            <outline text="Flutter low-level graphics engine: dart:ui"/>
+                        </outline>
+                        <outline text="Flutter framework dart packages">
+                            <outline text="Rendering, painting and widget framework"/>
+                            <outline text="Stock widgets"/>
+                            <outline text="Other packages">
+                                <outline text="Animation and scheduling"/>
+                                <outline text="Handle gestures"/>
+                                <outline text="Scroll physics"/>
+                                <outline text="Accessibility"/>
+                                <outline text="Native platform access"/>
+                            </outline>
+                        </outline>
+                        <outline text="Flutter command line tool">
+                            <outline text="Create new projects"/>
+                            <outline text="Launch devices and emulators"/>
+                            <outline text="Build, run, test, profile, debug, install apps"/>
+                            <outline text="Troubleshoot installation"/>
+                            <outline text="Download and install Dart packages and Flutter plugin from pub"/>
+                        </outline>
+                    </outline>
+                    <outline text="Dart IDE">
+                        <outline text="IntelliJ, Android Studio or VS Code"/>
+                    </outline>
+                    <outline text="Dart package repository: pub"/>
+                    <outline text="External Dart packages &amp; plugins">
+                        <outline text="From google"/>
+                        <outline text="From 3rd parties"/>
+                    </outline>
+                    <outline text="Android emulators and iOS simulators">
+                        <outline type="note" isComment="true" text="For testing our apps" user="StokeMasterJack" _user_id="116153" note_id="1282632" dateModified="Sat, 01 Sep 2018 15:50:51 +0000"/>
+                    </outline>
+                    <outline text="A mobile device or two"/>
+                    <outline text="Native platform IDEs (optional)">
+                        <outline text="Android: Android Studio"/>
+                        <outline text="iOS: Apple's Xcode IDE &amp; and an Apple Mac"/>
+                        <outline text="Used for">
+                            <outline text="Writing bridge code to access native platforms"/>
+                            <outline text="Building production releases"/>
+                            <outline text="Setting up emulators &amp; simulators"/>
+                        </outline>
+                    </outline>
+                </outline>
+                <outline text="Flutter compared">
+                    <outline text="Flutter v other approaches to cross-platform mobile">
+                        <outline text="Native"/>
+                        <outline text="Mobile web"/>
+                        <outline text="WebView"/>
+                        <outline text="Wrapped native widgets"/>
+                    </outline>
+                    <outline text="Flutter v other cross-platform mobile frameworks">
+                        <outline text="Cordova">
+                            <outline text="From Apache"/>
+                            <outline text="Based on WebViews"/>
+                            <outline text="Native access">
+                                <outline text="Cordova provides a bridge for common native functions"/>
+                            </outline>
+                        </outline>
+                        <outline text="Xamarin">
+                            <outline text="From Microsoft"/>
+                            <outline text="Apps are written in C#">
+                                <outline text="AOT on iOS"/>
+                                <outline text="AOT on Android: Experimental"/>
+                                <outline text="Pro: if you already know C#"/>
+                            </outline>
+                            <outline text="Wraps native UI widgets"/>
+                            <outline text="Native access">
+                                <outline text="Xamarin wraps many native APIs"/>
+                                <outline text="Pro: calling native APIs is easier"/>
+                                <outline text="Con: delayed support for the latest platform updates"/>
+                            </outline>
+                        </outline>
+                        <outline text="React Native">
+                            <outline text="From Facebook"/>
+                            <outline text="Wraps native widgets"/>
+                            <outline text="Apps are written in JavaScript">
+                                <outline text="JavaScript is interpreted at runtime">
+                                    <outline text="Not compiled"/>
+                                    <outline text="Not JIT'd"/>
+                                </outline>
+                                <outline text="JS interpreter is JavaScriptCore">
+                                    <outline text="The JS engine that powers Safari"/>
+                                    <outline text="iOS ships with JavaScriptCore"/>
+                                    <outline text="Android doesn’t. React Native bundles it."/>
+                                    <outline text="Con: Inconsistencies between different versions of JavaScriptCore on Android"/>
+                                </outline>
+                                <outline text="Con: slow startup"/>
+                                <outline text="Con: slow initial render"/>
+                            </outline>
+                            <outline text="Stock UI widgets">
+                                <outline text="Fewer compared to Flutter"/>
+                                <outline text="React Native relies more on the 3rd party ecosystem"/>
+                            </outline>
+                            <outline text="Native access">
+                                <outline text="Native access is thru a bridge similar to Dart"/>
+                            </outline>
+                        </outline>
+                    </outline>
+                    <outline text="Dart v other languages">
+                        <outline text="Dart vs JavaScript">
+                            <outline text="JS: ReactNative, mobile web, web view"/>
+                            <outline text="Con: not as fast as Dart compiled to native"/>
+                            <outline text="Con: no static types">
+                                <outline text="Con: less IDE-able"/>
+                                <outline text="Con: harder to refactor"/>
+                            </outline>
+                            <outline text="Pro: millions of developers that already know JavaScript"/>
+                            <outline text="Con: JavaScript toolchain is more complex and error-prone compared to Dart"/>
+                            <outline text="JS Pro: Can make use of *some* existing JS libs"/>
+                            <outline text="With TypeScript or Flow">
+                                <outline text="Con: Dart is less complex"/>
+                            </outline>
+                        </outline>
+                        <outline text="Dart vs Java"/>
+                    </outline>
+                    <outline text="Reasons *not* to use Flutter">
+                        <outline text="100% native look &amp; feel is an absolute requirement"/>
+                        <outline text="Absolute, maximum possible performance is required above anything else"/>
+                        <outline text="Huge and chatty volume of cross-realm calls"/>
+                        <outline text="Brownfield integration/migration">
+                            <outline text="Flutter *does* support this">
+                                <outline type="note" isComment="true" text="Android: **FlutterView**" user="StokeMasterJack" _user_id="116153" note_id="1282634" dateModified="Tue, 17 Jul 2018 15:26:53 +0000"/>
+                                <outline type="note" isComment="true" text="iOS: **FlutterViewController**" user="StokeMasterJack" _user_id="116153" note_id="1282635" dateModified="Tue, 17 Jul 2018 15:26:48 +0000"/>
+                                <outline type="note" isComment="true" text="https://github.com/flutter/flutter/wiki/Add-Flutter-to-existing-apps&#xD;&#xA;https://github.com/flutter/flutter/tree/master/examples/flutter_view&#xD;&#xA;https://github.com/flutter/flutter/tree/master/examples/platform_view" user="StokeMasterJack" _user_id="116153" note_id="1282636" dateModified="Tue, 17 Jul 2018 15:27:16 +0000"/>
+                            </outline>
+                            <outline text="But it's very new and rough around the edges"/>
+                            <outline text="Use caution"/>
+                        </outline>
+                        <outline text="You need a desktop app">
+                            <outline text="There is an effort underway to to build desktop apps with Flutter">
+                                <outline type="note" isComment="true" text="https://github.com/google/flutter-desktop-embedding" user="StokeMasterJack" _user_id="116153" note_id="1282637" dateModified="Sat, 01 Sep 2018 15:10:42 +0000"/>
+                            </outline>
+                            <outline text="But it's still very experimental"/>
+                        </outline>
+                        <outline text="You need a web app">
+                            <outline text="Flutter has no plans on supporting web apps"/>
+                        </outline>
+                        <outline text="You need 3D support">
+                            <outline text="No built-in support for 3D"/>
+                            <outline text=" At present Flutter is focussed on 2D"/>
+                        </outline>
+                    </outline>
+                </outline>
+                <outline text="Flutter pros - revisited">
+                    <outline text="User experience">
+                        <outline text="Fast (startup, execution, rendering)">
+                            <outline text="AOT native compiler"/>
+                            <outline text="Fewer cross-realm calls"/>
+                            <outline text="Object allocation without locks"/>
+                            <outline text="Garbage collection without locks"/>
+                            <outline text="Optimizations in UI pipeline"/>
+                        </outline>
+                        <outline text="Beautiful">
+                            <outline text="Huge suite of stock widgets"/>
+                            <outline text="Extreme UI control &amp; fidelity"/>
+                        </outline>
+                        <outline text="Feature rich">
+                            <outline text="Huge suite of stock widgets"/>
+                            <outline text="Extreme UI control &amp; fidelity"/>
+                            <outline text="Platform channels"/>
+                        </outline>
+                        <outline text="Native experience">
+                            <outline text="Platform flavored widgets"/>
+                            <outline text="Platform adaptive widgets"/>
+                            <outline text="Platform channels"/>
+                        </outline>
+                    </outline>
+                    <outline text="Developer productivity">
+                        <outline text="Huge suite of stock widgets"/>
+                        <outline text="Hot restart &amp; reload"/>
+                        <outline text="Statically typing">
+                            <outline text="More IDE-able"/>
+                            <outline text="Excellent refactoring support"/>
+                            <outline text="Find bugs sooner"/>
+                        </outline>
+                        <outline text="World class IDE">
+                            <outline text="By Flutter team"/>
+                        </outline>
+                        <outline text="Modern UI framework design">
+                            <outline text="Everything is a widget"/>
+                            <outline text="Reactive UI"/>
+                            <outline text="Extreme composition"/>
+                        </outline>
+                        <outline text="Single language"/>
+                        <outline text="Cross-platform code reuse">
+                            <outline text="Business logic code"/>
+                            <outline text="UI code"/>
+                        </outline>
+                    </outline>
+                </outline>
+            </outline>
+            <outline text="Blackjack project">
+                <outline text="Blackjack project overview"/>
+                <outline text="Blackjack business logic:">
+                    <outline type="note" isComment="true" text="Create the core business, test-first, and provide a whirlwind intro to Dart" user="StokeMasterJack" _user_id="116153" note_id="1278990" dateModified="Sun, 10 Jun 2018 07:07:35 +0000"/>
+                    <outline text="Create the core business, test-first, and provide a whirlwind intro to Dart"/>
+                    <outline text="Card test"/>
+                    <outline text="Card impl"/>
+                    <outline text="Hand test"/>
+                    <outline text="Hand impl"/>
+                    <outline text="Deck test"/>
+                    <outline text="Deck impl"/>
+                    <outline text="Game test"/>
+                    <outline text="Game impl"/>
+                </outline>
+                <outline text="Blackjack view layer">
+                    <outline text="Create basic shell of a UI"/>
+                    <outline text="Starter project using flutter command line tool"/>
+                    <outline text="Explore what is created"/>
+                    <outline text="MaterialApp, Scaffold, AppBar, Home page"/>
+                    <outline text="Create a simple UI for the game"/>
+                    <outline text="Display game-wide info"/>
+                    <outline text="Display per-player info"/>
+                    <outline text="Create 3 buttons: Deal, Hit, Stay"/>
+                    <outline text="Extract some widgets: HandView and ButtonsView:"/>
+                    <outline text="Pretty things a bit"/>
+                    <outline text="Add some margin, padding and alignment"/>
+                    <outline text="Add some colors, fonts and styles"/>
+                    <outline text="Add conditional rendering based on game and player state"/>
+                    <outline text="Create a graphical version of our UI"/>
+                    <outline text="Use assets for card images"/>
+                    <outline text="Image.Asset"/>
+                    <outline text="Add themes for consistent styling"/>
+                    <outline text="Material UI"/>
+                    <outline text="Using Themes"/>
+                    <outline text="Creating themes"/>
+                </outline>
+                <outline text="Blackjack interaction and state model">
+                    <outline text="Flutter's reactive functional UI concepts">
+                        <outline text="Keeping things in sync"/>
+                        <outline text="Flutter's variant of MVC"/>
+                        <outline text="Updating the UI"/>
+                        <outline text="Stateful vs Stateless widgets"/>
+                        <outline text="Where to put state"/>
+                    </outline>
+                    <outline text="Add state and interactivity to blackjack">
+                        <outline text="Create a stateful (controller) widget"/>
+                        <outline text="Add event handlers for deal, hit and stay"/>
+                    </outline>
+                    <outline text="Separation of concerns in Flutter">
+                        <outline text="MVC translated to Flutter"/>
+                        <outline text="Can we share controller logic between the 2 views?"/>
+                    </outline>
+                    <outline text="Create a home screen, for launching our 2 versions of the blackjack app">
+                        <outline text="Multi-screen apps in Flutter"/>
+                        <outline text="State-based rendering"/>
+                        <outline text="Create tab-like UI"/>
+                        <outline text="Navigator routes"/>
+                        <outline text="TabBar widget"/>
+                        <outline text="TabBarController"/>
+                    </outline>
+                </outline>
+                <outline text="Blackjack finishing touches">
+                    <outline text="Add platform aware buttons">
+                        <outline type="note" isComment="true" text="    Widget mkButton({&#xD;&#xA;        @required BuildContext ctx, &#xD;&#xA;        @required String key, &#xD;&#xA;        @required String title,&#xD;&#xA;        @required VoidCallback onPressed&#xD;&#xA;      }) {&#xD;&#xA;      assert(ctx != null);&#xD;&#xA;      if (Platform.isIOS) {&#xD;&#xA;        return mkButtonCupertino(ctx, key, title, onPressed);&#xD;&#xA;      } else {&#xD;&#xA;        return mkButtonMaterial(ctx, key, title, onPressed);&#xD;&#xA;      }&#xD;&#xA;    }" user="StokeMasterJack" _user_id="116153" note_id="1278991" dateModified="Tue, 17 Jul 2018 06:09:44 +0000"/>
+                    </outline>
+                    <outline text="Widget testing in Flutter widget"/>
+                </outline>
+            </outline>
+            <outline text="Layout mastery mini examplet">
+                <outline text="Flutter layout core concepts">
+                    <outline text="How parent and child collaborate to determine layout"/>
+                    <outline text="BoxConstraints"/>
+                    <outline text="Tight, Loose"/>
+                    <outline text="Bounded, Unbounded"/>
+                    <outline text="How is unbounded interpreted?"/>
+                </outline>
+                <outline text="Troubleshooting common problems">
+                    <outline text="Flexible child + unbounded constraints"/>
+                    <outline text="Clipping warnings"/>
+                </outline>
+                <outline text="Single child layouts">
+                    <outline text="Padding"/>
+                    <outline text="Center, Align"/>
+                    <outline text="SizedBox, ConstrainedBox"/>
+                    <outline text="SafeArea"/>
+                    <outline text="PreferredSize"/>
+                    <outline text="Decorated Box, BoxDecoration"/>
+                    <outline text="Container"/>
+                </outline>
+                <outline text="Flex">
+                    <outline text="Row, Column"/>
+                    <outline text="Customizing"/>
+                    <outline text="Expanded"/>
+                    <outline text="Potential problems"/>
+                </outline>
+                <outline text="Stack">
+                    <outline text="Fit"/>
+                    <outline text="Positioned and Unpositioned"/>
+                    <outline text="LayoutBuilder"/>
+                </outline>
+            </outline>
+            <outline text="Contacts project - part 1">
+                <outline text="Contacts project overview">
+                    <outline text="Plan out the apps layers"/>
+                    <outline text="Business layer"/>
+                    <outline text="Controllers"/>
+                    <outline text="Views"/>
+                </outline>
+                <outline text="Contacts business layer">
+                    <outline text="Test first approach in Flutter"/>
+                    <outline text="Data objects: Contact, some enums"/>
+                    <outline text="Contacts db service"/>
+                    <outline text="Data loading and parsing"/>
+                    <outline text="Searching, sorting"/>
+                    <outline text="Initially: start from JSON text"/>
+                </outline>
+                <outline text="Create initial Contacts UI">
+                    <outline text="Create App widget"/>
+                    <outline text="Create ContactsPage stateful widget"/>
+                </outline>
+                <outline text="Fill in the ContactsPage list view">
+                    <outline text="ListView and ListTile"/>
+                    <outline text="Adding an avatar"/>
+                    <outline text="Dealing with very long lists"/>
+                    <outline text="ListView.builder"/>
+                    <outline text="Add an onTap and onLongPress listener"/>
+                </outline>
+                <outline text="Flutter async overview">
+                    <outline text="Futures"/>
+                    <outline text="Async/Await"/>
+                    <outline text="Isolates"/>
+                </outline>
+                <outline text="Adding on to our  db service">
+                    <outline text="Fetch data from text asset"/>
+                    <outline text="Fetch data from http"/>
+                    <outline text="Adding change notifications"/>
+                </outline>
+                <outline text="Getting data into and out of our app">
+                    <outline text="Create a popup menu  in the app bar"/>
+                    <outline text="Wire the popup menu to the new db services"/>
+                    <outline text="Make the UI respond to db changes"/>
+                    <outline text="Use an isolate to offload main thread and prevent jank"/>
+                    <outline text="Improve the UI for our db loading actions"/>
+                    <outline text="Add snackbars, confirmation dialogs and progress indicators"/>
+                </outline>
+                <outline text="Create a tab bar">
+                    <outline text="3 Tabs: Favorites, Active contacts, All contacts"/>
+                    <outline text="Update db service to support filter by fav and active fields"/>
+                    <outline text="Design the state model"/>
+                    <outline text="Start with a home-made tab state model"/>
+                    <outline text="Switch to the built-in tab controller"/>
+                    <outline text="Dealing listener subscriptions"/>
+                </outline>
+                <outline text="Improve favs tab with a grid of thumbnails">
+                    <outline text="GridView"/>
+                    <outline text="Image.Network"/>
+                    <outline text="NetworkImage"/>
+                    <outline text="Use  GestureDetector"/>
+                </outline>
+            </outline>
+            <outline text="Contacts project - part 2">
+                <outline text="Search Mode: add search capability">
+                    <outline text="Update db service to support full-text  search"/>
+                    <outline text="Design the state model"/>
+                    <outline text="Two modes: view mode and search mode"/>
+                    <outline text="State-based app bar">
+                        <outline text="Search button"/>
+                        <outline text="Search text box"/>
+                        <outline text="Button to exit search mode"/>
+                        <outline text="Label to display matching record count"/>
+                    </outline>
+                    <outline text="Event handlers">
+                        <outline text="Add search button"/>
+                        <outline text="Search text changed"/>
+                        <outline text="Exit search mode"/>
+                    </outline>
+                    <outline text="State-based UI: only show contacts that match the search filter"/>
+                    <outline text="Ad a button to clear the search text field"/>
+                    <outline text="Ensure the the nav stack works correctly for both modes"/>
+                    <outline text="Using Flutter's local history feature"/>
+                </outline>
+                <outline text="Selection mode: allow users contacts (for delete, etc.)">
+                    <outline text="Update db service to support delete"/>
+                    <outline text="Design the state model"/>
+                    <outline text="Three modes: view mode, search mode and selection mode"/>
+                    <outline text="State-based app bar:">
+                        <outline text="Show selected-record count"/>
+                        <outline text="Select-mode specific action buttons"/>
+                        <outline text="Button to exit selection mode"/>
+                    </outline>
+                    <outline text="Events:">
+                        <outline text="Long press contact: turn on selection mode and selects that contact"/>
+                        <outline text="Tap a contact: selects that contact"/>
+                    </outline>
+                    <outline text="State-based List and fav contact tiles: visual reatmental to indicated selected state  (i.e. checkbox)"/>
+                    <outline text="Delete Selected action button to &quot;delete selected&quot; contacts">
+                        <outline text="Ok/Cancel dialog to confirm delete"/>
+                        <outline text="Show snack after user confirms"/>
+                    </outline>
+                    <outline text="Popup action menu:">
+                        <outline text="For additional selection-mode-specific actions"/>
+                        <outline text="Space-smart action menus"/>
+                    </outline>
+                    <outline text="Ensure nav stack works correctly for all 3 modes"/>
+                </outline>
+                <outline text="Contact Detail Page: read-only details for  a single contact">
+                    <outline text="Determine routing and state model">
+                        <outline text="How should ContactsPage call ContactDetailPage"/>
+                        <outline text="How should ContactsPage pass data to ContactDetailPage"/>
+                        <outline text="Will there be any shared state"/>
+                        <outline text="How how should the back button behave"/>
+                        <outline text="Overview of the various options in Flutter,  pros and cons"/>
+                        <outline text="Use Nav.push to connect ContactsPage to ContactDetailPage"/>
+                    </outline>
+                    <outline text="Create a simple ListView UI">
+                        <outline text="One row for each field in the Contact class"/>
+                        <outline text="Create a generic ListTile to display a single name/value pair"/>
+                    </outline>
+                    <outline text="Create a graphical app bar.">
+                        <outline text="Move the contact's photo appbar"/>
+                        <outline text="Move the full name to the appbar"/>
+                        <outline text="Use a stack to the  full name text on top of the contact photo"/>
+                        <outline text="Dealing with appbar's height problem"/>
+                        <outline text="Create a custom PreferredSize widget to customize the appbar"/>
+                        <outline text="Add some action buttons"/>
+                    </outline>
+                    <outline text="Make the appbar collapsible (shrink when the user scrolls)">
+                        <outline text="CustomScrollView"/>
+                        <outline text="FlexibleSpaceBar"/>
+                        <outline text="SliverAppBar, SliverList"/>
+                    </outline>
+                </outline>
+                <outline text="Create the ContactEditPage">
+                    <outline text="Add add/edit floating action buttons to ContactsPage and ContactDetaiPage"/>
+                    <outline text="Add the text fields"/>
+                    <outline text="Add  Input decorations to text fields"/>
+                    <outline text="Add some switch and checkbox widgets for the boolean fields"/>
+                    <outline text="Add a drop down select fields"/>
+                    <outline text="Add a popup dialog  pick-list field"/>
+                    <outline text="Add a date picker"/>
+                </outline>
+                <outline text="Add behaviors to ContactEditPage">
+                    <outline text="Create a stateful form widget to track the form's data"/>
+                    <outline text="Create controllers and change handlers for our fields"/>
+                    <outline text="Capturing user's attempt to navigate away before saving"/>
+                    <outline text="Conditionally show the Save button if form is dirty"/>
+                    <outline text="Adding form validation"/>
+                    <outline text="User the error text, label, hint text"/>
+                    <outline text="Ensure our form handles the nav stack correctly"/>
+                    <outline text="Making the save button work"/>
+                    <outline text="Add some themes for form fields"/>
+                    <outline text="OutlineInputBorder"/>
+                </outline>
+                <outline text="Darts package system">
+                    <outline text="Creating and consuming internal packages"/>
+                    <outline text="The Dart package repository: pub"/>
+                    <outline text="Consuming external packages pub or path"/>
+                    <outline text="Creating external packages"/>
+                    <outline text="Publishing packages to pup"/>
+                </outline>
+                <outline text="Persist contact data">
+                    <outline text="Use package path_provider to determine app-private directory"/>
+                    <outline text="Use package dart.io to read/write to files"/>
+                    <outline text="Save contacts to file"/>
+                    <outline text="Load contacts from file"/>
+                </outline>
+                <outline text="Refactor common code into a util package">
+                    <outline text="Create util as internal package"/>
+                    <outline text="Convert util to an external package"/>
+                </outline>
+                <outline text="Flutter's native platform interop">
+                    <outline text="Message passing"/>
+                    <outline text="Plugins"/>
+                    <outline text="Strategies using platform services"/>
+                    <outline text="Strategies for creating cross-platform apps"/>
+                </outline>
+                <outline text="Export contact data to shared device directory">
+                    <outline text="Requires permissions from the native OS"/>
+                    <outline text="Access native platform to request permissions">
+                        <outline text="Write Dart code to send request to native platform"/>
+                        <outline text="Write Android code to answer that request"/>
+                        <outline text="Write iOS code answer that request"/>
+                    </outline>
+                    <outline text="Save contacts into shared device directory"/>
+                </outline>
+                <outline text="Package permissions service as a plugin">
+                    <outline text="Benefits of making this a plugin"/>
+                    <outline text="Create a new plugin project"/>
+                    <outline text="Copy in permissions code"/>
+                    <outline text="Code changes to convert app code to plugin">
+                        <outline text="Update Android code"/>
+                        <outline text="Update iOS code"/>
+                    </outline>
+                </outline>
+            </outline>
+        </outline>
+        <outline text="Internal" tags="internal">
+            <outline text="Shelved modules 3">
+                <outline text="Flutter-native widgets - kill">
+                    <outline text="Approaches to cross-platform mobile UI"/>
+                    <outline text="Flutter's UI does not use ..">
+                        <outline text="web technologies">
+                            <outline text="web views"/>
+                            <outline text="the mobile browser"/>
+                        </outline>
+                        <outline text="native UI widgets"/>
+                    </outline>
+                    <outline text="Flutter-native widgets">
+                        <outline text="Flutter implements its own UI widgets">
+                            <outline text="From scratch"/>
+                            <outline text="Drawn by Flutter"/>
+                            <outline text="Using only the platform's low-level graphics primitives"/>
+                        </outline>
+                        <outline text="Pro: UI consistency">
+                            <outline type="note" isComment="true" text="Flutter UI widgets are more likely to look and behave consistently across multiple platforms and versions." user="StokeMasterJack" _user_id="116153" note_id="1282613" dateModified="Sat, 14 Jul 2018 04:02:15 +0000"/>
+                        </outline>
+                        <outline text="Pro: Brand-first designs">
+                            <outline type="note" isComment="true" text="Flutter provides a good fit for companies wanting to promote customized, brand-first design. &#xD;&#xA;" user="StokeMasterJack" _user_id="116153" note_id="1282614" dateModified="Sat, 14 Jul 2018 04:02:36 +0000"/>
+                        </outline>
+                        <outline text="Pro: Less to learn/maintain">
+                            <outline type="note" isComment="true" text="One has only to learn (and maintain) a single set of UI widgets when building a UI that targets both iOS and Android. " user="StokeMasterJack" _user_id="116153" note_id="1282615" dateModified="Sat, 14 Jul 2018 04:33:36 +0000"/>
+                        </outline>
+                        <outline text="Pro: Fewer cross-realm calls"/>
+                        <outline text="Con: Less native look and feel">
+                            <outline type="note" isComment="true" text="Since Flutter does not use native widgets, a Flutter app may not feel as native to users who are used to a certain native look and feel, at least compared to an apps that uses native widgets (including React Native)." user="StokeMasterJack" _user_id="116153" note_id="1282616" dateModified="Sat, 14 Jul 2018 04:03:12 +0000"/>
+                            <outline text="Flutter does have some solutions to this problem">
+                                <outline type="note" isComment="true" text="Flutter has a number of features for dealing with this exact situation. We'll revisit this topic in a later section." user="StokeMasterJack" _user_id="116153" note_id="1282617" dateModified="Sat, 14 Jul 2018 04:08:30 +0000"/>
+                            </outline>
+                        </outline>
+                    </outline>
+                    <outline text="Graphics, rendering, widget engine">
+                        <outline text="Flutter chose to build its own graphics platform">
+                            <outline text="Rather than use that provided by the native platform"/>
+                        </outline>
+                        <outline text="Graphics platform including:">
+                            <outline text="Low-level graphics engine">
+                                <outline text="Provides low-level graphics and text layout APIs."/>
+                                <outline text="Minimal dependencies on the underlying platform."/>
+                            </outline>
+                            <outline text="On top of that, a complete rendering engine">
+                                <outline text="This layer provides an abstraction for performing layout computations."/>
+                                <outline text="This is still a lower-level than most app and widget developers will ever use."/>
+                            </outline>
+                            <outline text="On top of that, a widget frameowrk">
+                                <outline text="Complete framework for defining and composing UI widgets"/>
+                            </outline>
+                            <outline text="And on top of that: the stock set of Flutter widges">
+                                <outline text="This is what you will use to build your apps"/>
+                            </outline>
+                        </outline>
+                        <outline text="All but the bottom-most layer is written in Dart">
+                            <outline text="dart:ui, the graphics engine, is written in C++"/>
+                            <outline text="But dart:ui is exposed as a Dart package to higher layers"/>
+                            <outline text="And thus available to your apps"/>
+                        </outline>
+                        <outline text="The graphics, painting, rendering, widget layers">
+                            <outline text="Are all accessible from your Dart code"/>
+                            <outline text="For use in your apps"/>
+                            <outline text="For extreme control &amp; fidelity"/>
+                        </outline>
+                        <outline text="Flutter is like a game engine">
+                            <outline text="Game engines that sit on top of Android or iOS work in a similar way"/>
+                            <outline text="They bypass much of the native platform's UI framework"/>
+                            <outline text="Providing their own graphics and rendering engine"/>
+                        </outline>
+                        <outline text="Pro: Freedom to choose between">
+                            <outline text="Convenience">
+                                <outline text="Code at a high-level"/>
+                                <outline text="Stitch together stock widgets into an app"/>
+                                <outline text="No need to visit Flutter's lower layers"/>
+                            </outline>
+                            <outline text="Extreme control &amp; fidelity">
+                                <outline text="Hook into Flutter's lower level graphics and rendering layers"/>
+                                <outline text="If you can imagine it, Flutter can probably render it."/>
+                            </outline>
+                        </outline>
+                    </outline>
+                    <outline text="Flutter's UI widgets have fewer dependencies on the native platform">
+                        <outline text="Only the Flutter's low-level graphics engine depends on the native platform">
+                            <outline type="note" isComment="true" text="And minimally" user="StokeMasterJack" _user_id="116153" note_id="1282618" dateModified="Wed, 29 Aug 2018 17:37:52 +0000"/>
+                        </outline>
+                        <outline text="Higher layers only depend on Flutter's graphics engine"/>
+                        <outline text="All widgets used by a Flutter app are *Flutter* widgets">
+                            <outline text="Flutter widgets are not part of the phone"/>
+                            <outline text="They must be compiled into your app’s deliverable">
+                                <outline text="The same goes for the entire graphics, rendering and widget platform"/>
+                            </outline>
+                        </outline>
+                        <outline text="Two types of libs">
+                            <outline text="&quot;Part of device&quot; libs">
+                                <outline text="Must already be present on user's device in order to run the app"/>
+                                <outline text="Device native widgets are in this category"/>
+                            </outline>
+                            <outline text="&quot;Part of app&quot; libs">
+                                <outline text="Must ship as part of your app"/>
+                                <outline text="Flutter widgets are in this category"/>
+                            </outline>
+                        </outline>
+                        <outline text="Flutter apps rely mostly on &quot;part of app&quot; libs"/>
+                        <outline text="Apps that rely more on &quot;part of device&quot; libs">
+                            <outline text="Device native apps">
+                                <outline text="Native iOS apps (Swift or Objective-C)"/>
+                                <outline text="Native Android apps (Kotlin or Java)"/>
+                            </outline>
+                            <outline text="Frameworks that rely on native widgets">
+                                <outline text="React Native"/>
+                                <outline text="Xamarin"/>
+                            </outline>
+                        </outline>
+                        <outline text="Pro: Less need to worry about supporting 5 versions of Android and 5 versions of iOS.">
+                            <outline text="It's Flutter's job to worry about that"/>
+                            <outline text="Your app's main dependency is the Flutter SDK: which ships as part of the app"/>
+                        </outline>
+                        <outline text="Pro: Use latest and greatest Flutter UI widgets - even on older phones"/>
+                        <outline text="Con: App download size will be larger than a native Android or iOS app"/>
+                        <outline text="Dart's tree shaking compiler">
+                            <outline type="note" isComment="true" text="Dart's &quot;tree shaking&quot; compiler alleviates this problem somewhat&#xD;&#xA;" user="StokeMasterJack" _user_id="116153" note_id="1282619" dateModified="Wed, 29 Aug 2018 16:58:01 +0000"/>
+                            <outline text="Compiler otimization"/>
+                            <outline text="Includes only code that is actually used in the build"/>
+                            <outline text="Pro: Slightly alleviates the &quot;large app size&quot; problem"/>
+                        </outline>
+                    </outline>
+                    <outline text="Fewer UI-related cross-realm calls">
+                        <outline text="App written in: Dart-compiled-to-native"/>
+                        <outline text="UI components written in: Dart-compiled-to-native"/>
+                        <outline text="**Pro:** faster, smooth rendering: scrolling, animation, transitions"/>
+                    </outline>
+                    <outline text="Optimizations in paint/render/widget layers">
+                        <outline text="Easier to optimize when">
+                            <outline text="Same team controls all layers"/>
+                            <outline text="Same language for all layers"/>
+                        </outline>
+                        <outline text="Optimizations">
+                            <outline text="Single-pass, linear-time layout &amp; painting">
+                                <outline type="note" isComment="true" text="Other systems use multi-pass" user="StokeMasterJack" _user_id="116153" note_id="1282620" dateModified="Sat, 01 Sep 2018 13:26:59 +0000"/>
+                            </outline>
+                            <outline text=" Invalidate subtrees: structural repainting">
+                                <outline type="note" isComment="true" text="Using compositing" user="StokeMasterJack" _user_id="116153" note_id="1282621" dateModified="Sat, 01 Sep 2018 12:14:47 +0000"/>
+                            </outline>
+                            <outline text="Simple layout constraints: min, max, width, height">
+                                <outline type="note" isComment="true" text="As opposed to ui-kit which uses:&#xD;&#xA;- a much more sophisticated constraint model&#xD;&#xA;- a general purpose constraint solver&#xD;&#xA;" user="StokeMasterJack" _user_id="116153" note_id="1282622" dateModified="Sat, 01 Sep 2018 12:14:12 +0000"/>
+                            </outline>
+                        </outline>
+                        <outline text="**Pro:** faster, smooth rendering: scrolling, animation, transitions"/>
+                    </outline>
+                </outline>
+                <outline text="Cross-platform mobile approaches">
+                    <outline text="Mobile web app">
+                        <outline text="App written in: JavaScript, HTML, CSS"/>
+                        <outline text="UI widgets: HTML elements (input, select, textarea, div)"/>
+                        <outline text="App runs in devices's mobile web browser"/>
+                        <outline text="Pros">
+                            <outline text="If you already know JavaScript/HTML/CSS"/>
+                            <outline text="Maximal cross-platform code sharing"/>
+                        </outline>
+                        <outline text="Cons">
+                            <outline text="UI limited to HTML"/>
+                            <outline text="UI performance (animations, transitions)"/>
+                            <outline text="Access to device features limited to HTML 5"/>
+                            <outline text="Web apps do not feel very native"/>
+                        </outline>
+                    </outline>
+                    <outline text="Web view framework">
+                        <outline text="What is a web view?">
+                            <outline text="A mobile web browser wrapped in a native component."/>
+                            <outline text="Allows a native iOS or Android app to embed a web browser"/>
+                            <outline text="Allows a native iOS or Android app to embed run a web a"/>
+                            <outline text="Both Android and iOS provide native web view components"/>
+                        </outline>
+                        <outline text="What is web view app?">
+                            <outline text="If one can embed a web browser in a native app">
+                                <outline text="One can also embed a web app in a native app"/>
+                            </outline>
+                            <outline text="Thus, one can build a web app using HTML, CSS and JavaScript">
+                                <outline text="Create a tiny native app consisting of nothing but a web view"/>
+                                <outline text="Run the web app in the web view"/>
+                                <outline text="Create a link on home screen to launch"/>
+                            </outline>
+                            <outline text="Basically a web app disguised as a mobile native app"/>
+                        </outline>
+                        <outline text="Web view apps do not depend on the mobile devices native UI widgets">
+                            <outline text="Other than the WebView widget"/>
+                            <outline text="They use html elements for their UI">
+                                <outline type="note" isComment="true" text=" (input, select, textarea, etc)" user="StokeMasterJack" _user_id="116153" note_id="1283376" dateModified="Wed, 29 Aug 2018 15:49:01 +0000"/>
+                            </outline>
+                        </outline>
+                        <outline text="Frameworks">
+                            <outline text="Cordova"/>
+                            <outline text="PhoneGap"/>
+                        </outline>
+                        <outline text="Pros">
+                            <outline text="Same as for mobile web app +"/>
+                            <outline text="Launch icon like native"/>
+                            <outline text="Greater access to device features via framework bridge"/>
+                        </outline>
+                        <outline text="Cons">
+                            <outline text="Same as for mobile web app"/>
+                        </outline>
+                    </outline>
+                    <outline text="Native widget framework">
+                        <outline text="Native UI widgets">
+                            <outline text="Android and iOS both include a set of native OEM UI widgets"/>
+                            <outline text="Do not ship as part of the app"/>
+                            <outline text="Must be preinstalled on the device"/>
+                            <outline text="Part of the device, not part of the app"/>
+                        </outline>
+                        <outline text="Native apps use native widgets">
+                            <outline text="Native iOS apps (Swift or Objective-C)"/>
+                            <outline text="Native Android apps (Java or Kotlin)"/>
+                        </outline>
+                        <outline text="Frameworks">
+                            <outline text="React Native"/>
+                            <outline text="Xamarin"/>
+                        </outline>
+                        <outline text="Pros">
+                            <outline text="more native look and feel than web views"/>
+                        </outline>
+                        <outline text="Cons">
+                            <outline text="less control over UI"/>
+                            <outline text="harder to share UI code across platforms"/>
+                            <outline text="more cross-realm calls"/>
+                            <outline text="potentially slower UI performance"/>
+                        </outline>
+                    </outline>
+                    <outline text="Cross-realm calls">
+                        <outline text="Crossing realms (AKA bridge calls)">
+                            <outline text="Fast">
+                                <outline text="JS code is fast"/>
+                                <outline text="Native code is fast">
+                                    <outline type="note" isComment="true" text="Or Objective-C or Kotlin or Java" user="StokeMasterJack" _user_id="116153" note_id="1283377" dateModified="Sat, 01 Sep 2018 11:09:53 +0000"/>
+                                </outline>
+                            </outline>
+                            <outline text="Slow">
+                                <outline text="JS calling native code is slow"/>
+                                <outline text="Native code calling JS is slow"/>
+                            </outline>
+                            <outline text="Goal: minimize cross-realm calls"/>
+                        </outline>
+                        <outline text="React realm crossing">
+                            <outline text="App: JS"/>
+                            <outline text="UI: Native"/>
+                            <outline text="Cross-realm calls">
+                                <outline text="App to native UI"/>
+                                <outline text="App to other native functions"/>
+                            </outline>
+                        </outline>
+                    </outline>
+                    <outline text="Game engine">
+                        <outline text="bypass most of native platform's UI framework"/>
+                        <outline text="provide their own graphics and rendering engine"/>
+                        <outline text="define their own look and feel"/>
+                    </outline>
+                </outline>
+                <outline text="Performance tips">
+                    <outline text="Prevent unnecessary re-renders">
+                        <outline type="note" isComment="true" text="https://robots.thoughtbot.com/examining-performance-differences-between-native-flutter-and-react-native-mobile-development-take-two" user="StokeMasterJack" _user_id="116153" note_id="1283378" dateModified="Wed, 29 Aug 2018 02:00:21 +0000"/>
+                        <outline text="Return same widget instance">
+                            <outline text="Analog to shouldComponentUpdate"/>
+                            <outline text="Discussion with Hixie on shouldComponentUpdate">
+                                <outline type="note" isComment="true" text="https://medium.freecodecamp.org/how-fast-is-flutter-i-built-a-stopwatch-app-to-find-out-9956fa0e40bd" user="StokeMasterJack" _user_id="116153" note_id="1283379" dateModified="Wed, 29 Aug 2018 02:34:29 +0000"/>
+                            </outline>
+                        </outline>
+                    </outline>
+                    <outline text="Reduce the scope of re-renders">
+                        <outline text="Stopwatch blog post">
+                            <outline type="note" isComment="true" text="https://medium.freecodecamp.org/how-fast-is-flutter-i-built-a-stopwatch-app-to-find-out-9956fa0e40bd" user="StokeMasterJack" _user_id="116153" note_id="1283380" dateModified="Wed, 29 Aug 2018 02:34:11 +0000"/>
+                        </outline>
+                        <outline text="Comparison to React Native and Native">
+                            <outline type="note" isComment="true" text="https://robots.thoughtbot.com/examining-performance-differences-between-native-flutter-and-react-native-mobile-development-take-two" user="StokeMasterJack" _user_id="116153" note_id="1283381" dateModified="Wed, 29 Aug 2018 02:35:49 +0000"/>
+                        </outline>
+                    </outline>
+                    <outline text="Avoid log statements"/>
+                    <outline text="Moved expensive work into a separate Dart isolate (e.g. using the compute method)"/>
+                    <outline text="Minimize bridge calls"/>
+                    <outline text="Use Dart Observatory"/>
+                    <outline text="Links">
+                        <outline text="https://flutter.io/ui-performance/"/>
+                    </outline>
+                </outline>
+                <outline text="Dart &amp; Flutter libs">
+                    <outline text="Dart core libraries">
+                        <outline type="note" isComment="true" text="Special dart: prefix" user="StokeMasterJack" _user_id="116153" note_id="1283382" dateModified="Sat, 01 Sep 2018 00:01:48 +0000"/>
+                        <outline text="Packages with prefix **dart:**"/>
+                        <outline text="dart:core"/>
+                        <outline text="dart:math"/>
+                        <outline text="dart:collection"/>
+                        <outline text="dart:async"/>
+                        <outline text="dart:io"/>
+                        <outline text="dart:isolate"/>
+                        <outline text="dart:convert"/>
+                        <outline text="dart:typed_data"/>
+                        <outline text="***dart:ui***">
+                            <outline text="Flutter super low-level graphics engine"/>
+                            <outline text="Written in C++"/>
+                        </outline>
+                    </outline>
+                    <outline text="Flutter framework libraries - packages with that start with **flutter/***">
+                        <outline text="rendering"/>
+                        <outline text="painting"/>
+                        <outline text="animation"/>
+                        <outline text="scheduler"/>
+                        <outline text="physics"/>
+                        <outline text="gestures"/>
+                        <outline text="semantics"/>
+                        <outline text="foundation"/>
+                        <outline text="services"/>
+                        <outline text="widget"/>
+                        <outline text="material"/>
+                        <outline text="cupertino"/>
+                    </outline>
+                </outline>
+                <outline text="Where can Dart code run?">
+                    <outline text="VM">
+                        <outline text="Windows"/>
+                        <outline text="Mac"/>
+                        <outline text="Linux"/>
+                    </outline>
+                    <outline text="AOT Compiler">
+                        <outline text="JavaScript">
+                            <outline text="Client-side web apps"/>
+                            <outline text="Node.js apps"/>
+                        </outline>
+                        <outline text="Android devices"/>
+                        <outline text="iOS Devices"/>
+                    </outline>
+                    <outline text="AOT Compiler">
+                        <outline text="JavaScript">
+                            <outline text="Client-side web apps"/>
+                            <outline text="Node.js apps"/>
+                        </outline>
+                        <outline text="Android devices"/>
+                        <outline text="iOS Devices"/>
+                    </outline>
+                    <outline text="Web Client"/>
+                    <outline text="Server-side"/>
+                    <outline text="WebiOS, Android, and"/>
+                    <outline text="WebiOS, Android, and"/>
+                    <outline text="Server-side"/>
+                </outline>
+                <outline text="Extreme composition">
+                    <outline text="Minimal widget inheritance">
+                        <outline type="note" isComment="true" text="Unlike other UI frameworks, Flutter widgets make very little use of inheritance" user="StokeMasterJack" _user_id="116153" note_id="1283383" dateModified="Wed, 29 Aug 2018 12:42:44 +0000"/>
+                    </outline>
+                    <outline text="Reuse is achieved by *composing* widgets"/>
+                    <outline text="Pro: More flexible, less brittle mechanism of reuse"/>
+                </outline>
+            </outline>
+            <outline text="Native code">
+                <outline text="Native Android code">
+                    <outline text="Java"/>
+                    <outline text="Kotlin"/>
+                </outline>
+                <outline text="Native iOS code">
+                    <outline text="Objective-C"/>
+                    <outline text="Swift"/>
+                </outline>
+            </outline>
+            <outline text="Grass catcher">
+                <outline text="Single purpose layout widgets (like Padding, Align,SizedBox)"/>
+                <outline text="Goodbye Global Layout">
+                    <outline type="note" isComment="true" text="```&#xD;&#xA;Center(&#xD;&#xA;    child: Text('Text', style: textStyle)&#xD;&#xA;)&#xD;&#xA;```" user="StokeMasterJack" _user_id="116153" note_id="1283384" dateModified="Sun, 02 Sep 2018 06:32:59 +0000"/>
+                    <outline text="Local layouts: Every Widget defines it’s own layout. No need to tell the parent that it’s children are supposed to be centered."/>
+                </outline>
+                <outline text="Some good images">
+                    <outline text="https://www.slideshare.net/RandalSchwartz/native-mobile-application-development-with-flutter-dart"/>
+                    <outline text="https://docs.google.com/presentation/d/1cw7A4HbvM_Abv320rVgPVGiUP2msVs7tfGbkgdrTy0I/edit#slide=id.gbb3c3233b_0_187"/>
+                </outline>
+                <outline text="Dave1" uploads="dQhAv6vbJiHcSR" uploads_count="1"/>
+                <outline text="Dave2">
+                    <outline text="## Dave&#xD;&#xA;&#xD;&#xA;## Head 1&#xD;&#xA;Foo [img: blackjack-1.jpg]&#xD;&#xA;[GitHub Pages](https://pages.github.com/)&#xD;&#xA;&#xD;&#xA;## Head 2&#xD;&#xA;### Head 2a&#xD;&#xA;### Head 2b" uploads="qChDOHd59ADPEq" uploads_count="1"/>
+                </outline>
+                <outline text="Two native apps" tags="slide"/>
+            </outline>
+        </outline>
+    </body>
+</opml>

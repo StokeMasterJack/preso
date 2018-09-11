@@ -1,17 +1,37 @@
-# Flux 
 
-An application architecture for React
+            ---
+        Two native apps##Android-native app
 
----
+        ##iOS-native app
 
-### Flux Design
+        
+            ---
+        Native UI widgets##Android and iOS both include a set of native UI widgets
 
-@ul
+        ##Do not ship as part of the app
 
-- Dispatcher: Manages Data Flow
-- Stores: Handle State & Logic
-- Views: Render Data via React
+        ##Must be preinstalled on the device
 
----
+        ##Part of the device, not part of the app
 
-![Flux Explained](https://facebook.github.io/flux/img/flux-simple-f8-diagram-explained-1300w.png)
+        
+            ---
+        Pros##Best performance
+
+        ##Most native look and feel
+
+        
+            ---
+        Cons##Two platforms to learn
+
+        ##Two code bases to maintain
+
+        ##Cross-platform code sharing: zero
+
+        ##More than two platforms to support
+
+        ##Some quotes from developers
+
+        
+            ---
+        Two native apps

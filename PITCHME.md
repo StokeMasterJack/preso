@@ -1,12 +1,14 @@
 
             ---
-        Two native apps##Android-native app
+        #Two native apps##Android-native app
 
         ##iOS-native app
 
         
+
+        
             ---
-        Native UI widgets##Android and iOS both include a set of native UI widgets
+        #Native UI widgets##Android and iOS both include a set of native UI widgets
 
         ##Do not ship as part of the app
 
@@ -15,14 +17,18 @@
         ##Part of the device, not part of the app
 
         
+
+        
             ---
-        Pros##Best performance
+        #Pros##Best performance
 
         ##Most native look and feel
 
         
+
+        
             ---
-        Cons##Two platforms to learn
+        #Cons##Two platforms to learn
 
         ##Two code bases to maintain
 
@@ -33,5 +39,9 @@
         ##Some quotes from developers
 
         
+
+        
             ---
-        Two native apps
+        #Two native apps
+
+        

@@ -6,6 +6,8 @@ An application architecture for React
 
 ### Flux Design
 
+@ul
+
 - Dispatcher: Manages Data Flow
 - Stores: Handle State & Logic
 - Views: Render Data via React

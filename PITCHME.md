@@ -1,47 +1,1 @@
-
-            ---
-        #Two native apps##Android-native app
-
-        ##iOS-native app
-
-        
-
-        
-            ---
-        #Native UI widgets##Android and iOS both include a set of native UI widgets
-
-        ##Do not ship as part of the app
-
-        ##Must be preinstalled on the device
-
-        ##Part of the device, not part of the app
-
-        
-
-        
-            ---
-        #Pros##Best performance
-
-        ##Most native look and feel
-
-        
-
-        
-            ---
-        #Cons##Two platforms to learn
-
-        ##Two code bases to maintain
-
-        ##Cross-platform code sharing: zero
-
-        ##More than two platforms to support
-
-        ##Some quotes from developers
-
-        
-
-        
-            ---
-        #Two native apps
-
-        
+# Two native apps## Android-native app### Language: Java or Kotlin### UI widgets: Android-native widgets## iOS-native app### Language: Swift or Objective-C### UI widgets: iOS-native widgets---# Native UI widgets## Android and iOS both include a set of native UI widgets## Do not ship as part of the app## Must be preinstalled on the device## Part of the device, not part of the app---# Pros## Best performance## Most native look and feel---# Cons## Two platforms to learn## Two code bases to maintain## Cross-platform code sharing: zero## More than two platforms to support### Multiple versions of iOS### Multiple versions of Android## Some quotes from developers### It is hard to make a reliable UI because native Android widgets behave differently across Android versions### I once lost a whole day fixing a drop-down menu that worked differently on Android 4.1.2.### Why are there a thousand different versions of every Android package and every single one breaks another?### there are still a huge chunk of users running Android 4 while others use 5, 6 and there are a ton of breaking changes between each version, and users can't even upgrade their devices---# Two native apps---

@@ -3,7 +3,7 @@ background: images/woman/bottom-bar-thin.jpg
 background-size :80% 80%
 #background-size: cover
 
-theme : sky
+theme: sky
 
 background-position: left
 background-repeat : no-repeat

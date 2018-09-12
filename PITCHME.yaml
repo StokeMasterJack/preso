@@ -1,7 +1,10 @@
-theme: sky
-#background: images/woman/bottom-bar-thin.jpg
-#background-size :80% 80%
-#background-size: cover
+theme: white
+background: images/woman/bottom-bar-thick-1.png
+background-position: bottom
+background-clip: content-box
+background-size: 100% auto
+
+layout: top-left
 
 
 
@@ -12,23 +15,23 @@ theme: sky
 #published : true
 
 #controls-layout : top-right
-#controls-layout : edges
+controls-layout : edges
 
-#pro-menus-hidden : true
+pro-menus-hidden : true
 
 
 #
 # Theme-Override Setting
 # Doc: https://gitpitch.com/docs/settings/custom-theme
 #
-#theme-override : template/css/PITCHME.css
+theme-override : css/custom.css
 
 #
 # Logo Setting
 # https://gitpitch.com/docs/settings/logo
 #
-#logo: images/woman/bottom-bar-thin.jpg
-#logo-position : bottom-center
+#logo: images/woman/bottom-bar-thin-copy-1.png
+#logo-position: bottom-right
 
 #
 # Footnote Setting

@@ -1,0 +1,47 @@
+footer {
+    display: none !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Calibri !important;
+}
+
+div.slide-number {
+
+    display: none !important;
+}
+
+body {
+    margin-bottom: -20px;
+    font-family: Calibri !important;
+}
+
+.slide-background.present {
+    /*margin-bottom: -2px;*/
+}
+
+button.navigate-up {
+    display: none !important;
+}
+
+button.navigate-down {
+    display: none !important;
+}
+
+button.navigate-left {
+    display: none !important;
+}
+
+button.navigate-right {
+    display: none !important;
+}
+
+div.slide-background{
+    background: white;
+}
+
+div.progress {
+    display: none !important;
+}

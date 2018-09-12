@@ -1,20 +1,20 @@
-#theme: Beige
-background: images/woman/bottom-bar-thin.jpg
-background-size :80% 80%
+theme: sky
+#background: images/woman/bottom-bar-thin.jpg
+#background-size :80% 80%
 #background-size: cover
 
-theme: sky
 
-background-position: left
-background-repeat : no-repeat
+
+#background-position: left
+#background-repeat : no-repeat
 
 #stealth : daithi
 #published : true
 
 #controls-layout : top-right
-controls-layout : edges
+#controls-layout : edges
 
-pro-menus-hidden : true
+#pro-menus-hidden : true
 
 
 #
